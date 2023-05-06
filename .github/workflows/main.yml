@@ -3,6 +3,8 @@ on: [push]
 jobs:
   Test-github-actions:
     runs-on: ubuntu-latest
-      steps:
-        - run echo "My first CI/CD Pipeline job"
-        - run echo "Success"
+    steps:
+      - run: echo "My first CI/CD Pipeline job"
+      - run: echo "Success"
+      - name: Check out repository code
+        uses: actions/checkout@v3
